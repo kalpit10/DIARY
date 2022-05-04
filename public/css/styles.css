@@ -1,0 +1,109 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #9FE2BF;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #1abc9c;
+}
+
+.auth-form {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.auth-form p {
+  margin: 20px 0px;
+  color: #7a7a7a;
+}
+
+.auth input {
+  border: 1px solid #f7d23b;
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  outline: none;
+}
+
+.auth-button {
+  appearance: none;
+  border: 0;
+  padding: 10px 15px;
+  color: white;
+  background-color: #f7d23b;
+  border-radius: 3px;
+  width: 250px;
+  margin: 0 auto 10px auto;
+}
+
+.or {
+  position: relative;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.or span {
+  color: #7a7a7a;
+  background: white;
+  padding: 0px 10px;
+}
+
+.or::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  height: 0px;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: translateY(-50%);
+  z-index: -1;
+  border-top: 1px solid rgb(184, 196, 194);
+  margin: 0px auto;
+}
+
+.delete-button{
+  color: #f7d23b !important;
+  font-size: 12px;
+  background-color: white;
+  border: 2px solid #f7d23b;
+  transition-duration: 0.2s;
+  padding: 10px 10px 10px 14px;
+  letter-spacing: 5px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}

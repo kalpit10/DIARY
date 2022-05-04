@@ -1,0 +1,13 @@
+<%- include("partials/header")-%>
+<form class="auth-form" action="/login" method="POST" autocomplete="off">
+    <div class="auth">
+        <h1>Log in to your account</h1>
+        
+        <input type="email" name="username" placeholder="Email Address">
+        <input type="password" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="auth-button">Login</button>
+    <p>Not a user? <a style="text-decoration: underline;" href="/register">Sign up</a></p>
+</form>
+
+<%- include("partials/footer") -%>
