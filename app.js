@@ -181,7 +181,7 @@ app.post("/Compose", function(req, res){
 
 const post = new Post({  //for taking both title and body in the command line, we created a js object
   title:req.body.postTitle,
-  content:req.body.postBody
+  content:req.body.postBody,
 });
   post.save(function(err){
     if(!err){
