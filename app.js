@@ -16,7 +16,7 @@ const cookieParser = require("cookie-parser");
 const cookieSession = require("cookie-session");
 const session = require("express-session");
 
-const homeStartingContent = "HI GUYS! WELCOME TO YOUR PERSONAL DIARY! IF YOU WANT TO ADD SOME CONTENT IN IT GO TO /Compose PAGE, WRITE SOME INFORMATION SELECT THE TITLE AND CLICK ON PUBLISH";
+const homeStartingContent = "HI GUYS! WELCOME TO YOUR PERSONAL DIARY! IF YOU WANT TO ADD SOME CONTENT IN IT CLICK ON COMPOSE BUTTON";
 const aboutContent = "THIS IS OUR ABOUT PAGE";
 const contactContent = "THIS IS OUR CONTACT PAGE";
 
@@ -37,9 +37,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //app.use(passport.initialize());
 //app.use(passport.session());
-//mongoose.connect("mongodb://localhost:27017/diaryDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/diaryDB", {useNewUrlParser: true});
 
-mongoose.connect("mongodb+srv://kalpit10:Nvidiagtx1650@cluster0.sqktt.mongodb.net/diaryDB?retryWrites=true&w=majority/", {useNewUrlParser: true});
+//mongoose.connect("mongodb+srv://kalpit10:Nvidiagtx1650@cluster0.sqktt.mongodb.net/diaryDB?retryWrites=true&w=majority/", {useNewUrlParser: true});
 
 
 //const userSchema = new mongoose.Schema({
