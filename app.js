@@ -171,7 +171,7 @@ app.get("/home", function(req, res){
   //res.redirect("/");
 //});
 
-
+let navArr = [];
 
 app.get("/Compose", function(req, res){
   res.render("Compose");
@@ -198,7 +198,9 @@ app.get("/posts/:postId", function (req, res) {
   Post.findOne({_id: requestedPostId}, function(err, post){
     res.render("post", {
       title: post.title,
-      content: post.content
+      content: post.content,
+      post,
+      navArr,
     });
   });
 });
