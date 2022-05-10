@@ -37,9 +37,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //app.use(passport.initialize());
 //app.use(passport.session());
-mongoose.connect("mongodb://localhost:27017/diaryDB", {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost:27017/diaryDB", {useNewUrlParser: true});
 
-//mongoose.connect("mongodb+srv://kalpit10:Nvidiagtx1650@cluster0.sqktt.mongodb.net/diaryDB?retryWrites=true&w=majority/", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://kalpit10:Nvidiagtx1650@cluster0.sqktt.mongodb.net/diaryDB?retryWrites=true&w=majority/", {useNewUrlParser: true});
 
 
 //const userSchema = new mongoose.Schema({
