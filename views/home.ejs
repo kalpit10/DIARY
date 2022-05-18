@@ -4,7 +4,9 @@
 <p><%= firstContent %></p>
 
 
-<a href="/compose" class="compose-button" role="button" aria-disabled="true" style="float: right;">COMPOSE</a>
+<form class="" action="/compose" method="post">
+  <a href="/compose" class="compose-button" role="button" aria-disabled="true" style="float: right;">COMPOSE</a>
+</form>
 
 
 <% posts.forEach(function(post){ //in foreach we write singular version of the array name in the function, we could have written anything but singular version is preferred more..         %>
@@ -17,6 +19,7 @@
       <button type="submit" name="button" value="<%= post._id%>">delete</button>
 
     </form>
+
     </p>
 <%  }); %>
 
