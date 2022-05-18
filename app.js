@@ -1,20 +1,20 @@
 //jshint esversion:6
 
 
-require("dotenv").config()
+//require("dotenv").config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
-const date = require(__dirname + "/date.js");
-const passport = require("passport"); //For authentication
-const LocalStrategy = require("passport-local");//authenticates users using a username and password.
-const passportLocalMongoose = require("passport-local-mongoose");
-const findOrCreate = require("mongoose-findorcreate");
-const cookieParser = require("cookie-parser");
-const cookieSession = require("cookie-session");
-const session = require("express-session");
+//const date = require(__dirname + "/date.js");
+//const passport = require("passport"); //For authentication
+//const LocalStrategy = require("passport-local");//authenticates users using a username and password.
+//const passportLocalMongoose = require("passport-local-mongoose");
+//const findOrCreate = require("mongoose-findorcreate");
+//const cookieParser = require("cookie-parser");
+//const cookieSession = require("cookie-session");
+//const session = require("express-session");
 
 const homeStartingContent = "HI GUYS! WELCOME TO YOUR PERSONAL DIARY! IF YOU WANT TO ADD SOME CONTENT IN IT CLICK ON COMPOSE BUTTON";
 const aboutContent = "THIS IS OUR ABOUT PAGE";
@@ -171,7 +171,6 @@ app.get("/home", function(req, res){
   //res.redirect("/");
 //});
 
-let navArr = [];
 
 app.get("/Compose", function(req, res){
   res.render("Compose");
@@ -199,8 +198,6 @@ app.get("/posts/:postId", function (req, res) {
     res.render("post", {
       title: post.title,
       content: post.content,
-      post,
-      navArr,
     });
   });
 });
