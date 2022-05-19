@@ -43,6 +43,7 @@ app.use(bodyParser.urlencoded(
 mongoose.connect("mongodb+srv://kalpit10:Nvidiagtx1650@cluster0.sqktt.mongodb.net/diaryDB?retryWrites=true&w=majority/", {useNewUrlParser: true});
 
 
+
 //const userSchema = new mongoose.Schema({
   //name: String,
   //password: String,
@@ -53,10 +54,7 @@ mongoose.connect("mongodb+srv://kalpit10:Nvidiagtx1650@cluster0.sqktt.mongodb.ne
 //userSchema.plugin(findOrCreate);
 
 
-// /node_modules
-// npm-debug.log
-// .DS_Store
-// /*.env
+
 
 
 //const User = new mongoose.model("User", userSchema);
