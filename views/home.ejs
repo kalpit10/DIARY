@@ -1,16 +1,25 @@
-<%- include('partials/header') %>
+<%- include("partials/header") //it looked in views by default so if we want to change the directory just add the path -%>
+
+<h1>HOME</h1>
+<p><%= firstContent %></p>
 
 
-<div class="jumbotron centered"> <!--jumbotron is bootstrap-->
-  <div class="container">
-    <i class="fas fa-key fa-6x"></i>
-    <h1 id="display-3">Welcome to your Personal Diary!!!</h1>
-    <p class="lead">Write your thoughts</p>
-    <hr>
-    <a class="btn btn-outline-dark btn-lg" href="/register" role="button">Register</a>
-    <a class="btn btn-outline-dark btn-lg" href="/login" role="button">Login</a>
+<form class="" action="/compose" method="post">
+  <a href="/compose" class="compose-button" role="button" aria-disabled="true" style="float: right;">COMPOSE</a>
+</form>
 
-  </div>
-</div>
 
-<%- include('partials/footer') %>
+<% posts.forEach(function(post){ //in foreach we write singular version of the array name in the function, we could have written anything but singular version is preferred more..         %>
+
+    <h1><%=post.title%></h1>
+    <p>
+      <%=post.content.substring(0,100) + "..." %>
+  <a href="/posts/<%= post._id %>">Read More</a> <!--in this we are taking the id and whenever we click on read more it gets loaded to the next page for full content -->
+  <form class="" action="/delete" method="post">
+      <button type="submit" name="button" value="<%= post._id%>">delete</button>
+
+    </form>
+
+    </p>
+<%  }); %>
+<%- include("partials/footer")-%>
